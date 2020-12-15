@@ -1,0 +1,11 @@
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\bin\Debug\netcoreapp2.1\SimpleSnake.deps.json
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\bin\Debug\netcoreapp2.1\SimpleSnake.runtimeconfig.json
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\bin\Debug\netcoreapp2.1\SimpleSnake.runtimeconfig.dev.json
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\bin\Debug\netcoreapp2.1\SimpleSnake.dll
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\bin\Debug\netcoreapp2.1\SimpleSnake.pdb
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\obj\Debug\netcoreapp2.1\SimpleSnake.AssemblyInfoInputs.cache
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\obj\Debug\netcoreapp2.1\SimpleSnake.AssemblyInfo.cs
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\obj\Debug\netcoreapp2.1\SimpleSnake.csproj.CoreCompileInputs.cache
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\obj\Debug\netcoreapp2.1\SimpleSnake.dll
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\obj\Debug\netcoreapp2.1\SimpleSnake.pdb
+D:\Programming\C#\04.C# OOP - October 2020\Workshop\SnakeGame\SimpleSnake\obj\Debug\netcoreapp2.1\SimpleSnake.genruntimeconfig.cache

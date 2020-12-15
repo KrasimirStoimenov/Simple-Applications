@@ -95,9 +95,9 @@ namespace SimpleSnake.Core
             Console.Write("Would you like to continue? y/n ");
 
 
-            string input = Console.ReadLine().ToLower();
+            ConsoleKeyInfo userInput = Console.ReadKey();
 
-            if (input == "y")
+            if (userInput.Key == ConsoleKey.Y)
             {
                 Console.Clear();
                 StartUp.Main();

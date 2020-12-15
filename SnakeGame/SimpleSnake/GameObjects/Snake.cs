@@ -14,6 +14,7 @@ namespace SimpleSnake.GameObjects
         private Wall wall;
         private Food[] food;
         private Queue<Point> snakeElements;
+
         private int RandomFoodNumber => new Random().Next(0, this.food.Length);
 
         public Snake(Wall wall)
@@ -27,6 +28,7 @@ namespace SimpleSnake.GameObjects
             this.food[foodIndex].SetRandomPosition(this.snakeElements);
 
         }
+        public int Score { get; private set; }
         private void CreateSnake()
         {
             for (int topY = 1; topY < 6; topY++)
@@ -84,7 +86,9 @@ namespace SimpleSnake.GameObjects
         private void Eat(Point direction, Point currentSnakeHead)
         {
             int length = food[foodIndex].FoodPoints;
-
+            this.Score += food[foodIndex].FoodPoints;
+            Console.SetCursorPosition(62, 1);
+            Console.WriteLine($"Result: {this.Score}");
             for (int i = 0; i < length; i++)
             {
                 this.snakeElements.Enqueue(new Point(this.nextLeftX, this.nextTopY));

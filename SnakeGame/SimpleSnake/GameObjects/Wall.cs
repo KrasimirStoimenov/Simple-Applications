@@ -1,4 +1,4 @@
-﻿using System.Xml.Serialization;
+﻿using System;
 
 namespace SimpleSnake.GameObjects
 {
@@ -9,7 +9,12 @@ namespace SimpleSnake.GameObjects
         public Wall(int leftX, int topY)
             : base(leftX, topY)
         {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             InitializeWallBorders();
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.SetCursorPosition(62, 1);
+            Console.WriteLine("Result: 0");
+
         }
 
         private void SetHorizontalLine(int topY)
@@ -34,7 +39,7 @@ namespace SimpleSnake.GameObjects
             SetHorizontalLine(this.TopY);
 
             SetVerticalLine(0);
-            SetVerticalLine(this.LeftX-1);
+            SetVerticalLine(this.LeftX - 1);
         }
 
         public bool IsPointOfWall(Point snake)
