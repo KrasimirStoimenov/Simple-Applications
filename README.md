@@ -1,2 +1,1 @@
-# Snake-Game
-Snake Game
+Console Application Simple Projects
