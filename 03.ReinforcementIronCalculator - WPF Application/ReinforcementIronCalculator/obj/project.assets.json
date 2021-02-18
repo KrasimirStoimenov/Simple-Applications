@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1\\Programming\\C# work\\ReinforcementIronCalculator\\ReinforcementIronCalculator\\ReinforcementIronCalculator.csproj",
+      "projectUniqueName": "D:\\Documents\\GitHub\\Simple-Console-Applications\\03.ReinforcementIronCalculator - WPF Application\\ReinforcementIronCalculator\\ReinforcementIronCalculator.csproj",
       "projectName": "ReinforcementIronCalculator",
-      "projectPath": "D:\\1\\Programming\\C# work\\ReinforcementIronCalculator\\ReinforcementIronCalculator\\ReinforcementIronCalculator.csproj",
+      "projectPath": "D:\\Documents\\GitHub\\Simple-Console-Applications\\03.ReinforcementIronCalculator - WPF Application\\ReinforcementIronCalculator\\ReinforcementIronCalculator.csproj",
       "packagesPath": "C:\\Users\\OWNER\\.nuget\\packages\\",
-      "outputPath": "D:\\1\\Programming\\C# work\\ReinforcementIronCalculator\\ReinforcementIronCalculator\\obj\\",
+      "outputPath": "D:\\Documents\\GitHub\\Simple-Console-Applications\\03.ReinforcementIronCalculator - WPF Application\\ReinforcementIronCalculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\OWNER\\AppData\\Roaming\\NuGet\\NuGet.Config",

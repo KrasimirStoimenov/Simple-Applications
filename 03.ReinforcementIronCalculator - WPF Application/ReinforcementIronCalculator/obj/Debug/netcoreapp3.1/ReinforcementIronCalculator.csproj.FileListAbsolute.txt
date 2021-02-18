@@ -16,3 +16,21 @@ D:\1\Programming\C# work\ReinforcementIronCalculator\ReinforcementIronCalculator
 D:\1\Programming\C# work\ReinforcementIronCalculator\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.dll
 D:\1\Programming\C# work\ReinforcementIronCalculator\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.pdb
 D:\1\Programming\C# work\ReinforcementIronCalculator\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.genruntimeconfig.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.exe
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.deps.json
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.runtimeconfig.json
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.runtimeconfig.dev.json
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.dll
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.pdb
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.csprojAssemblyReference.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator_MarkupCompile.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.g.resources
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.AssemblyInfoInputs.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.AssemblyInfo.cs
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.dll
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.pdb
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.genruntimeconfig.cache
