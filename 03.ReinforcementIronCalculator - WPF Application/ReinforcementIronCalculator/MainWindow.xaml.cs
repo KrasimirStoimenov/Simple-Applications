@@ -148,7 +148,7 @@ namespace ReinforcementIronCalculator
 
         private void EditButton(object sender, RoutedEventArgs e)
         {
-            if (ListBox.SelectedItem.ToString() == this.customer)
+            if (ListBox.SelectedItem == null || ListBox.SelectedItem.ToString() == this.customer)
             {
                 MessageBox.Show("Invalid element to remove!");
             }
