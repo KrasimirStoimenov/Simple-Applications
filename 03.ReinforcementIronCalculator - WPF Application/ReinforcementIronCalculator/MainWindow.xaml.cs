@@ -21,7 +21,7 @@ namespace ReinforcementIronCalculator
         public MainWindow()
         {
             InitializeComponent();
-            TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
+            PrintTotalWeight();
         }
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
@@ -86,11 +86,11 @@ namespace ReinforcementIronCalculator
             }
             else
             {
-                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier,2);
+                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier, 2);
                 this.totalWeight += weight;
 
-                string message = $"Reinforcement Number: {this.reinforcementNumber} Count: {this.count} Length:{this.length} Weight:{weight:F2}";
-                TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
+                string message = $"Reinforcement Number: {this.reinforcementNumber} Count: {this.count} Length: {this.length} Weight: {weight:F2}";
+                PrintTotalWeight();
 
                 if (ListBox.Items.Count == 0)
                 {
@@ -98,6 +98,8 @@ namespace ReinforcementIronCalculator
                 }
                 ListBox.Items.Add(message);
             }
+
+            Customer.IsReadOnly = true;
 
             ResetPrimaryAttributes();
         }
@@ -144,6 +146,24 @@ namespace ReinforcementIronCalculator
             MessageBox.Show("Program saved!");
         }
 
+        private void EditButton(object sender, RoutedEventArgs e)
+        {
+            if (ListBox.SelectedItem.ToString() == this.customer)
+            {
+                MessageBox.Show("Invalid element to remove!");
+            }
+            else
+            {
+                var selectedItem = ListBox.SelectedItem.ToString();
+                var splited = selectedItem.Split(": ", StringSplitOptions.RemoveEmptyEntries);
+                var weightToRemove = double.Parse(splited[splited.Length - 1]);
+                ListBox.Items.Remove(selectedItem);
+
+                this.totalWeight -= weightToRemove;
+                PrintTotalWeight();
+            }
+        }
+
         private void ResetPrimaryAttributes()
         {
             Count.Text = string.Empty;
@@ -166,9 +186,12 @@ namespace ReinforcementIronCalculator
             this.length = 0;
             this.totalWeight = 0;
 
-            TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
-
+            PrintTotalWeight();
         }
 
+        private void PrintTotalWeight()
+        {
+            TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
+        }
     }
 }
