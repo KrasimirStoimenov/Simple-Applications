@@ -11,15 +11,15 @@
             <ColumnDefinition Width="191*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Customer" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
-        <TextBox Name="Customer" HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" Height="26" TextChanged="Customer_TextChanged" Grid.ColumnSpan="2"/>
+        <TextBox Name="Customer" HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" Height="26" TextChanged="CustomerBox" Grid.ColumnSpan="2"/>
         <Label Content="Count" HorizontalAlignment="Left" Margin="30,80,0,0" VerticalAlignment="Top" Width="110"/>
         <Label Content="Number" HorizontalAlignment="Left" Margin="30,140,0,0" VerticalAlignment="Top" Width="110"/>
         <Label Content="Length" HorizontalAlignment="Left" Margin="30,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.506" Width="110"/>
         <Label Content="Multiplier" HorizontalAlignment="Left" Margin="30,260,0,0" VerticalAlignment="Top" Width="110"/>
-        <TextBox Name ="Count" PreviewTextInput ="NumberValidationTextBox" HorizontalAlignment="Left" Margin="140,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Count_TextChanged" Height="26"/>
-        <TextBox Name ="Number" PreviewTextInput ="NumberValidationTextBox" HorizontalAlignment="Left" Margin="140,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Number_TextChanged" Height="26"/>
-        <TextBox Name ="Length" PreviewTextInput ="DecimalNumberValidationTextBox" HorizontalAlignment="Left" Margin="140,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Length_TextChanged" Height="26"/>
-        <ComboBox Name ="ComboBox" HorizontalAlignment="Left" Margin="140,260,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Height="26">
+        <TextBox Name ="Count" PreviewTextInput ="NumberValidationTextBox" HorizontalAlignment="Left" Margin="140,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="CountBox" Height="26"/>
+        <TextBox Name ="Number" PreviewTextInput ="NumberValidationTextBox" HorizontalAlignment="Left" Margin="140,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ReinforcementBox" Height="26"/>
+        <TextBox Name ="Length" PreviewTextInput ="DecimalNumberValidationTextBox" HorizontalAlignment="Left" Margin="140,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="LengthBox" Height="26"/>
+        <ComboBox Name ="ComboBox" HorizontalAlignment="Left" Margin="140,260,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="MultiplierBox" Height="26">
             <ComboBoxItem>No Multiplyer</ComboBoxItem>
             <ComboBoxItem>x1.1</ComboBoxItem>
             <ComboBoxItem>x1.3</ComboBoxItem>

@@ -35,7 +35,7 @@ namespace ReinforcementIronCalculator
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        private void Count_TextChanged(object sender, TextChangedEventArgs e)
+        private void CountBox(object sender, TextChangedEventArgs e)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace ReinforcementIronCalculator
             }
         }
 
-        private void Number_TextChanged(object sender, TextChangedEventArgs e)
+        private void ReinforcementBox(object sender, TextChangedEventArgs e)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace ReinforcementIronCalculator
             }
         }
 
-        private void Length_TextChanged(object sender, TextChangedEventArgs e)
+        private void LengthBox(object sender, TextChangedEventArgs e)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace ReinforcementIronCalculator
             }
         }
 
-        private void Customer_TextChanged(object sender, TextChangedEventArgs e)
+        private void CustomerBox(object sender, TextChangedEventArgs e)
         {
             this.customer = Customer.Text;
         }
@@ -103,7 +103,7 @@ namespace ReinforcementIronCalculator
         }
 
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void MultiplierBox(object sender, SelectionChangedEventArgs e)
         {
             string box = ComboBox.SelectedItem.ToString();
             switch (box)
