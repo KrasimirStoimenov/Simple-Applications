@@ -86,7 +86,7 @@ namespace ReinforcementIronCalculator
             }
             else
             {
-                double weight = weightForCalculation.CalculateWeight() * this.multiplier;
+                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier,2);
                 this.totalWeight += weight;
 
                 string message = $"Reinforcement Number: {this.reinforcementNumber} Count: {this.count} Length:{this.length} Weight:{weight:F2}";
