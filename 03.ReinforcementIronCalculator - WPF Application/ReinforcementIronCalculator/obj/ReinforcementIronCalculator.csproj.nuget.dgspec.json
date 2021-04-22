@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "IronXL.Excel": {
+              "target": "Package",
+              "version": "[2020.12.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

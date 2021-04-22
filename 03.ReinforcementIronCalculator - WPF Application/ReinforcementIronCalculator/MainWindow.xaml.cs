@@ -1,6 +1,7 @@
-﻿using Microsoft.Office.Interop.Excel;
+﻿using IronXL;
 using ReinforcementIronCalculator.Factories;
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -197,24 +198,15 @@ namespace ReinforcementIronCalculator
 
         private void GenerateExcelFile(object sender, RoutedEventArgs e)
         {
-            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
-            app.Visible = true;
-            app.WindowState = XlWindowState.xlMaximized;
+            WorkBook workbook = WorkBook.Create(ExcelFileFormat.XLSX);
+            WorkSheet sheet = workbook.CreateWorkSheet("ЕБ№");
 
-            Workbook wb = app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
-            Worksheet ws = wb.Worksheets[1];
-            DateTime currentDate = DateTime.Now;
 
-            ws.Range["A1:A3"].Value = "Who is number one? :)";
-            ws.Range["A4"].Value = "vitoshacademy.com";
-            ws.Range["A5"].Value = currentDate;
-            ws.Range["B6"].Value = "Tommorow's date is: =>";
-            ws.Range["C6"].FormulaLocal = "= A5 + 1";
-            ws.Range["A7"].FormulaLocal = "=SUM(D1:D10)";
-            for (int i = 1; i <= 10; i++)
-                ws.Range["D" + i].Value = i * 2;
-
-            wb.SaveAs($"{Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory)}\\Заявка {this.customer} - {DateTime.Now.ToString("dd-MM-yyyy")}.xlsx");
+            sheet.Merge("B2:K2");
+            var cellB2 = sheet["B2"];
+            cellB2.Value = "ЕТ \"xXx\"";
+            cellB2.Style.BottomBorder.Type = IronXL.Styles.BorderType.Double;
+            workbook.SaveAs($"{Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory)}\\Заявка {this.customer} - {DateTime.Now.ToString("dd-MM-yyyy")}.XLSX");
         }
     }
 }
