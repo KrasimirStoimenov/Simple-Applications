@@ -34,3 +34,6 @@ D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator -
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.dll
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.pdb
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.genruntimeconfig.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.csproj.ResolveComReference.cache
+D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll

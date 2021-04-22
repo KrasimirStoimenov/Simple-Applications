@@ -1,4 +1,5 @@
-﻿using ReinforcementIronCalculator.Factories;
+﻿using Microsoft.Office.Interop.Excel;
+using ReinforcementIronCalculator.Factories;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -10,7 +11,7 @@ namespace ReinforcementIronCalculator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : System.Windows.Window
     {
         private string customer;
         private int count;
@@ -192,6 +193,28 @@ namespace ReinforcementIronCalculator
         private void PrintTotalWeight()
         {
             TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
+        }
+
+        private void GenerateExcelFile(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            app.Visible = true;
+            app.WindowState = XlWindowState.xlMaximized;
+
+            Workbook wb = app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+            Worksheet ws = wb.Worksheets[1];
+            DateTime currentDate = DateTime.Now;
+
+            ws.Range["A1:A3"].Value = "Who is number one? :)";
+            ws.Range["A4"].Value = "vitoshacademy.com";
+            ws.Range["A5"].Value = currentDate;
+            ws.Range["B6"].Value = "Tommorow's date is: =>";
+            ws.Range["C6"].FormulaLocal = "= A5 + 1";
+            ws.Range["A7"].FormulaLocal = "=SUM(D1:D10)";
+            for (int i = 1; i <= 10; i++)
+                ws.Range["D" + i].Value = i * 2;
+
+            wb.SaveAs($"{Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory)}\\Заявка {this.customer} - {DateTime.Now.ToString("dd-MM-yyyy")}.xlsx");
         }
     }
 }
