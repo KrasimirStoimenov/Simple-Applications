@@ -20,6 +20,7 @@ namespace ReinforcementIronCalculator
         private double length;
         private double multiplier = 1;
         private double totalWeight = 0;
+        private int counter = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -105,7 +106,6 @@ namespace ReinforcementIronCalculator
 
             ResetPrimaryAttributes();
         }
-
 
         private void MultiplierBox(object sender, SelectionChangedEventArgs e)
         {
@@ -194,19 +194,6 @@ namespace ReinforcementIronCalculator
         private void PrintTotalWeight()
         {
             TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
-        }
-
-        private void GenerateExcelFile(object sender, RoutedEventArgs e)
-        {
-            WorkBook workbook = WorkBook.Create(ExcelFileFormat.XLSX);
-            WorkSheet sheet = workbook.CreateWorkSheet("ЕБ№");
-
-
-            sheet.Merge("B2:K2");
-            var cellB2 = sheet["B2"];
-            cellB2.Value = "ЕТ \"xXx\"";
-            cellB2.Style.BottomBorder.Type = IronXL.Styles.BorderType.Double;
-            workbook.SaveAs($"{Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory)}\\Заявка {this.customer} - {DateTime.Now.ToString("dd-MM-yyyy")}.XLSX");
         }
     }
 }
