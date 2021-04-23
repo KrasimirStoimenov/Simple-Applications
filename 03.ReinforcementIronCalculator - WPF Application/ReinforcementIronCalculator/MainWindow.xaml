@@ -3,8 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Reinforcement Iron Calculator v1.0" Height="500" Width="900">
 
-
-
     <Grid>
         <Label Content="Customer" HorizontalAlignment="Left" Margin="155,0,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
         <TextBox Name="Customer" HorizontalAlignment="Left" Margin="30,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" Height="26" TextChanged="CustomerBox" Grid.ColumnSpan="2"/>
@@ -23,9 +21,8 @@
         <Button Content="Calculate" HorizontalAlignment="Left" Margin="67,376,0,0" VerticalAlignment="Top" Height="52" Width="250" Click="CalculateButton"/>
         <ListBox Name ="ListBox" Margin="35,0,10,92" Grid.Column="1"/>
         <TextBox Name ="TotalWeight" HorizontalAlignment="Left" Margin="35,397,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="32" Grid.Column="1"/>
-        <Button Name ="SaveFile" Content="SaveFile" HorizontalAlignment="Left" Margin="271,397,0,0" VerticalAlignment="Top" Width="152" Click="SaveFileButton" Height="31" Grid.Column="1"/>
-        <Button Content="Remove" Grid.Column="1" HorizontalAlignment="Left" Margin="206,397,0,0" VerticalAlignment="Top" Height="31" Width="57" Click="EditButton"/>
-        <Button Width="Auto" Margin="428,397,10,33" Click="GenerateExcelFile" Content="Generate Excel File" Grid.Column="1"/>
+        <Button Name ="SaveFile" Content="SaveFile" HorizontalAlignment="Left" Margin="390,398,0,0" VerticalAlignment="Top" Width="152" Click="SaveFileButton" Height="31" Grid.Column="1"/>
+        <Button Content="Remove" Grid.Column="1" HorizontalAlignment="Left" Margin="246,398,0,0" VerticalAlignment="Top" Height="31" Width="106" Click="EditButton"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="109*"/>
             <ColumnDefinition Width="191*"/>
