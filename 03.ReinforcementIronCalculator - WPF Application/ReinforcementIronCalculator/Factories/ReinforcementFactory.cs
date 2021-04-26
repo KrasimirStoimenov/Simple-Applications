@@ -6,17 +6,24 @@ namespace ReinforcementIronCalculator.Factories
 {
     public class ReinforcementFactory : IReinforcementFactory
     {
-        public ICalculateWeight Create(int width, int count, double length)
+        public ICalculateWeight Create(int width, int count, double length, bool isFi)
         {
             ICalculateWeight weightForCalculation = null;
 
             switch (width)
             {
                 case 6:
-                    weightForCalculation = new F6(count, length);
+                    weightForCalculation = new Fi6(count, length);
                     break;
                 case 8:
-                    weightForCalculation = new N8(count, length);
+                    if (isFi)
+                    {
+                        weightForCalculation = new Fi8(count, length);
+                    }
+                    else
+                    {
+                        weightForCalculation = new N8(count, length);
+                    }
                     break;
                 case 10:
                     weightForCalculation = new N10(count, length);

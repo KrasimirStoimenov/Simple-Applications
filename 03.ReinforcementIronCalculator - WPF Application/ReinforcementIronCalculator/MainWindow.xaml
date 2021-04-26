@@ -12,6 +12,7 @@
         <Label Content="Multiplier" HorizontalAlignment="Left" Margin="30,260,0,0" VerticalAlignment="Top" Width="110"/>
         <TextBox Name ="Count" PreviewTextInput ="NumberValidationTextBox" HorizontalAlignment="Left" Margin="140,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="CountBox" Height="26"/>
         <TextBox Name ="Number" PreviewTextInput ="NumberValidationTextBox" HorizontalAlignment="Left" Margin="140,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ReinforcementBox" Height="26"/>
+        <CheckBox Content="Ф8" HorizontalAlignment="Left" Margin="140,171,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
         <TextBox Name ="Length" PreviewTextInput ="DecimalNumberValidationTextBox" HorizontalAlignment="Left" Margin="140,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="LengthBox" Height="26"/>
         <ComboBox Name ="ComboBox" HorizontalAlignment="Left" Margin="140,260,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="MultiplierBox" Height="26">
             <ComboBoxItem>No Multiplyer</ComboBoxItem>

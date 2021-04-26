@@ -20,7 +20,7 @@ namespace ReinforcementIronCalculator
         private double length;
         private double multiplier = 1;
         private double totalWeight = 0;
-        private int counter = 0;
+        private bool isFi = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -82,17 +82,17 @@ namespace ReinforcementIronCalculator
         private void CalculateButton(object sender, RoutedEventArgs e)
         {
             ReinforcementFactory factory = new ReinforcementFactory();
-            var weightForCalculation = factory.Create(reinforcementNumber, count, length);
+            var weightForCalculation = factory.Create(reinforcementNumber, count, length,isFi);
             if (weightForCalculation == null)
             {
                 MessageBox.Show("Invalid Data");
             }
             else
             {
-                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier, 2);
+                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier, 3);
                 this.totalWeight += weight;
 
-                string message = $"Reinforcement Number: {this.reinforcementNumber} Count: {this.count} Length: {this.length} Weight: {weight:F2}";
+                string message = $"Reinforcement Number: {this.reinforcementNumber} Count: {this.count} Length: {this.length} Weight: {weight:F3}";
                 PrintTotalWeight();
 
                 if (ListBox.Items.Count == 0)
@@ -194,6 +194,11 @@ namespace ReinforcementIronCalculator
         private void PrintTotalWeight()
         {
             TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            isFi = true;
         }
     }
 }

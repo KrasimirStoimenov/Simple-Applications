@@ -4,6 +4,6 @@ namespace ReinforcementIronCalculator.Factories.Contracts
 {
     public interface IReinforcementFactory
     {
-        public ICalculateWeight Create(int width,int count,double length);
+        public ICalculateWeight Create(int width,int count,double length,bool isFi);
     }
 }
