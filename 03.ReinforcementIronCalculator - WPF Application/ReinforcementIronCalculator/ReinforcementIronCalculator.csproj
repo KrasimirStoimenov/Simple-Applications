@@ -4,10 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <StartupObject>ReinforcementIronCalculator.App</StartupObject>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="IronXL.Excel" Version="2020.12.2" />
-  </ItemGroup>
 
 </Project>

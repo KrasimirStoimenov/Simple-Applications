@@ -1,11 +1,11 @@
-﻿using IronXL;
-using ReinforcementIronCalculator.Factories;
+﻿using ReinforcementIronCalculator.Factories;
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Media3D;
 
 namespace ReinforcementIronCalculator
 {
@@ -38,6 +38,11 @@ namespace ReinforcementIronCalculator
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        private void CustomerBox(object sender, TextChangedEventArgs e)
+        {
+            this.customer = Customer.Text;
+        }
+
         private void CountBox(object sender, TextChangedEventArgs e)
         {
             try
@@ -61,6 +66,20 @@ namespace ReinforcementIronCalculator
             }
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            this.reinforcementNumber = 8;
+            isFi = true;
+            Number.Visibility = Visibility.Hidden;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Number.Text = string.Empty;
+            isFi = false;
+            Number.Visibility = Visibility.Visible;
+        }
+
         private void LengthBox(object sender, TextChangedEventArgs e)
         {
             try
@@ -72,39 +91,6 @@ namespace ReinforcementIronCalculator
             {
                 Length.Text = string.Empty;
             }
-        }
-
-        private void CustomerBox(object sender, TextChangedEventArgs e)
-        {
-            this.customer = Customer.Text;
-        }
-
-        private void CalculateButton(object sender, RoutedEventArgs e)
-        {
-            ReinforcementFactory factory = new ReinforcementFactory();
-            var weightForCalculation = factory.Create(reinforcementNumber, count, length, isFi);
-            if (weightForCalculation == null)
-            {
-                MessageBox.Show("Invalid Data");
-            }
-            else
-            {
-                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier, 3);
-                this.totalWeight += weight;
-
-                string message = $"Reinforcement Number: {this.reinforcementNumber} Count: {this.count} Length: {this.length} Weight: {weight:F3}";
-                PrintTotalWeight();
-
-                if (ListBox.Items.Count == 0)
-                {
-                    ListBox.Items.Add(customer);
-                }
-                ListBox.Items.Add(message);
-            }
-
-            Customer.IsReadOnly = true;
-
-            ResetPrimaryAttributes();
         }
 
         private void MultiplierBox(object sender, SelectionChangedEventArgs e)
@@ -124,35 +110,40 @@ namespace ReinforcementIronCalculator
             }
         }
 
-        private void SaveFileButton(object sender, RoutedEventArgs e)
+        private void CalculateButton(object sender, RoutedEventArgs e)
         {
-            if (ListBox.Items.Count <= 0)
+            ReinforcementFactory factory = new ReinforcementFactory();
+            var weightForCalculation = factory.Create(reinforcementNumber, count, length, isFi);
+            if (weightForCalculation == null)
             {
-                MessageBox.Show("Noting To Save!");
-                return;
+                MessageBox.Show("Невалидна стойност!");
+            }
+            else
+            {
+                double weight = Math.Round(weightForCalculation.CalculateWeight() * this.multiplier, 2);
+                this.totalWeight += weight;
+
+                string message = GetOutputMessage(this.reinforcementNumber, this.count, this.length, weight, this.isFi);
+
+                if (ListBox.Items.Count == 0)
+                {
+                    ListBox.Items.Add(customer);
+                }
+                ListBox.Items.Add(message);
+
+                PrintTotalWeight();
             }
 
-            string path = $"{Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory)}\\Заявка {this.customer} - {DateTime.Now.ToString("dd-MM-yyyy")}.txt";
+            Customer.IsReadOnly = true;
 
-            System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(path);
-            foreach (var item in ListBox.Items)
-            {
-                SaveFile.WriteLine(item);
-            }
-            SaveFile.WriteLine();
-            SaveFile.WriteLine($"Total Weight: {this.totalWeight:F2}");
-            SaveFile.Close();
-
-            ResetAllAttributes();
-
-            MessageBox.Show("Program saved!");
+            ResetPrimaryAttributes();
         }
 
         private void EditButton(object sender, RoutedEventArgs e)
         {
             if (ListBox.SelectedItem == null || ListBox.SelectedItem.ToString() == this.customer)
             {
-                MessageBox.Show("Invalid element to remove!");
+                MessageBox.Show("Невалиден елемент за премахване!");
             }
             else
             {
@@ -164,6 +155,44 @@ namespace ReinforcementIronCalculator
                 this.totalWeight -= weightToRemove;
                 PrintTotalWeight();
             }
+        }
+
+        private void SaveFileButton(object sender, RoutedEventArgs e)
+        {
+            if (ListBox.Items.Count <= 0)
+            {
+                MessageBox.Show("Няма нищо за записване!");
+                return;
+            }
+
+            string path = $"{Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory)}\\Заявка {this.customer} - {DateTime.Now.ToString("dd-MM-yyyy")}.txt";
+
+            System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(path);
+            foreach (var item in ListBox.Items)
+            {
+                SaveFile.WriteLine(item);
+            }
+            SaveFile.WriteLine();
+            SaveFile.WriteLine($"Всичко килограми: {this.totalWeight:F2}");
+            SaveFile.Close();
+
+            ResetAllAttributes();
+
+            MessageBox.Show("Запазено!");
+        }
+
+        private void PrintTotalWeight()
+        {
+            TotalWeight.Text = $"Всичко килограми: {this.totalWeight:F2}";
+        }
+
+        private string GetOutputMessage(int reinforcementNumber, int count, double length, double weight, bool isFi)
+        {
+            if (isFi)
+            {
+                return $"Арматурно желязо Ф{this.reinforcementNumber:D2} Брой:{this.count:D2} Дължина:{this.length} Килограми: {weight:F2}";
+            }
+            return $"Арматурно желязо №{this.reinforcementNumber:D2} Брой:{this.count:D2} Дължина:{this.length} Килограми: {weight:F2}";
         }
 
         private void ResetPrimaryAttributes()
@@ -183,7 +212,7 @@ namespace ReinforcementIronCalculator
             Number.Text = string.Empty;
             Length.Text = string.Empty;
             ListBox.Items.Clear();
-            Customer.Text = "";
+            Customer.Text = string.Empty;
             this.count = 0;
             this.reinforcementNumber = 0;
             this.length = 0;
@@ -192,23 +221,6 @@ namespace ReinforcementIronCalculator
             PrintTotalWeight();
         }
 
-        private void PrintTotalWeight()
-        {
-            TotalWeight.Text = $"Total Weight: {this.totalWeight:F2}";
-        }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            this.reinforcementNumber = 8;
-            isFi = true;
-            Number.Visibility = Visibility.Hidden;
-        }
-
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            Number.Text = string.Empty;
-            isFi = false;
-            Number.Visibility = Visibility.Visible;
-        }
     }
 }

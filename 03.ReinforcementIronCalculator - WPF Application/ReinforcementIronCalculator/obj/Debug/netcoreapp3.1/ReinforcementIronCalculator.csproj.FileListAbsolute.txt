@@ -22,7 +22,6 @@ D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator -
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.runtimeconfig.dev.json
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.dll
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\ReinforcementIronCalculator.pdb
-D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.csprojAssemblyReference.cache
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\MainWindow.baml
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\App.g.cs
@@ -34,5 +33,3 @@ D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator -
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.dll
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.pdb
 D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.genruntimeconfig.cache
-D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\bin\Debug\netcoreapp3.1\IronXL.dll
-D:\Documents\GitHub\Simple-Console-Applications\03.ReinforcementIronCalculator - WPF Application\ReinforcementIronCalculator\obj\Debug\netcoreapp3.1\ReinforcementIronCalculator.csproj.CopyComplete
