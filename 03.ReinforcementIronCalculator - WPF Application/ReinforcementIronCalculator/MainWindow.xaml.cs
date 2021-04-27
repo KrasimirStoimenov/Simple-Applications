@@ -174,6 +174,7 @@ namespace ReinforcementIronCalculator
             this.count = 0;
             this.reinforcementNumber = 0;
             this.length = 0;
+            this.Checkbox.IsChecked = false;
         }
 
         private void ResetAllAttributes()
@@ -198,7 +199,16 @@ namespace ReinforcementIronCalculator
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
+            this.reinforcementNumber = 8;
             isFi = true;
+            Number.Visibility = Visibility.Hidden;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Number.Text = string.Empty;
+            isFi = false;
+            Number.Visibility = Visibility.Visible;
         }
     }
 }
