@@ -82,7 +82,7 @@ namespace ReinforcementIronCalculator
         private void CalculateButton(object sender, RoutedEventArgs e)
         {
             ReinforcementFactory factory = new ReinforcementFactory();
-            var weightForCalculation = factory.Create(reinforcementNumber, count, length,isFi);
+            var weightForCalculation = factory.Create(reinforcementNumber, count, length, isFi);
             if (weightForCalculation == null)
             {
                 MessageBox.Show("Invalid Data");
