@@ -190,9 +190,9 @@ namespace ReinforcementIronCalculator
         {
             if (isFi)
             {
-                return $"Арматурно желязо Ф{this.reinforcementNumber:D2} Брой:{this.count:D2} Дължина:{this.length:F2} Килограми: {weight:F2}";
+                return $"Арматурно желязо Ф{this.reinforcementNumber:D2} * {this.length:F2} Брой:{this.count:D2} Килограми: {weight:F2}";
             }
-            return $"Арматурно желязо №{this.reinforcementNumber:D2} Брой:{this.count:D2} Дължина:{this.length:F2} Килограми: {weight:F2}";
+            return $"Арматурно желязо №{this.reinforcementNumber:D2} * {this.length:F2} Брой:{this.count:D2} Килограми: {weight:F2}";
         }
 
         private void ResetPrimaryAttributes()
