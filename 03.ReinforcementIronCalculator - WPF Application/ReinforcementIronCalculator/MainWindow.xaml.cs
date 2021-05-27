@@ -188,7 +188,7 @@ namespace ReinforcementIronCalculator
 
         private string GetOutputMessage(int reinforcementNumber, int count, double length, double weight, bool isFi)
         {
-            if (isFi)
+            if (isFi || reinforcementNumber == 6)
             {
                 return $"Арматурно желязо Ф{this.reinforcementNumber:D2} * {this.length:F2} Брой:{this.count:D2} Килограми: {weight:F2}";
             }
