@@ -43,6 +43,9 @@ namespace ReinforcementIronCalculator.Factories
                 case 20:
                     weightForCalculation = new N20(count, length);
                     break;
+                case 22:
+                    weightForCalculation = new N22(count, length);
+                    break;
             }
 
             return weightForCalculation;
