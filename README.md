@@ -1,4 +1,4 @@
-Simple Console Applications
+Simple Applications
 
 01.Snake Game                     
 02.Console Calculator                  
